@@ -6,7 +6,6 @@ import javax.inject.Inject;
 import javax.websocket.server.PathParam;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.att.dao.CustomerDaoImpl;
+import com.att.dao.CustomerDao;
 import com.att.domain.Customer;
 
 /**
@@ -29,7 +28,7 @@ public class CustomerResource {
 	private final Logger log = Logger.getLogger(CustomerResource.class);
 
 	@Inject
-	private CustomerDaoImpl customerDaoImpl;
+	private CustomerDao customerDaoImpl;
 
 	/**
 	 * REST-API to get the Customer based on id
