@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.att.dao.CustomerDao;
+import com.att.dao.CustomerDaoImpl;
 import com.att.domain.Customer;
 
 /**
@@ -28,7 +28,7 @@ public class CustomerResource {
 	private final Logger log = Logger.getLogger(CustomerResource.class);
 
 	@Inject
-	private CustomerDao customerDaoImpl;
+	private CustomerDaoImpl customerDaoImpl;
 
 	/**
 	 * REST-API to get the Customer based on id
